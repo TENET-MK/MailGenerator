@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Email</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <form id="contactForm">
+    <input placeholder="Name" id="name" type="text" autocomplete="off" required>
+    
+    <input placeholder="Email" id="to" type="email" name="to" autocomplete="off" required>
+    <select id="EventName" required>
+      <option value="">SELECT EVENT</option>
+      <option value="PaperPresentation">Paper Presentation</option>
+      <option value="ProjectPresentation">Project Presentation</option>
+      <option value="AIMLHackathon">AIML Hackathon</option>
+      <option value="IOTHackathon">IOT Hackathon</option>
+      <option value="Entrepreneureship">Entrepreneureship</option>
+      <option value="Line Follower">Line Follower</option>
+      <option value="Maze Explorer">Maze Explorer</option>
+      <option value="Robo Soccer">Robo Soccer</option>
+      <option value="Circuit Debugging">Circuit Debugging</option>
+      <option value="Tech it Out">Tech it Out</option>
+      <option value="WorkShop">WorkShop</option>
+      <option value="Non Technical">----NON TECHNICAL ----</option>
+      <option value="Quiz">Quiz</option>
+      <option value="Theme Photography">Theme Photography</option>
+      <option value="Bridge making">Bridge making</option>
+      <option value="Rubik's Cube">Rubik's Cube</option>
+      <option value="Puzzles">Puzzles</option>
+      <option value="Mock CID">Mock CID</option>
+      <option value="Connections">Connections</option>
+      <option value="Da vinci's Newspaper">Da vinci's Newspaper</option>
+      <option value="Action Speaks">Action Speaks</option>
+      <option value="Shoot and Broadcast">Shoot and Broadcast</option>
+      <option value="Combo 1">Combo 1</option>
+      <option value="Combo 2">Combo 2</option>
+      <option value="Combo 3">Combo 3</option>
+      <option value="Combo 4">Combo 4</option>
+    </select>
+
+    <br></br>
+
+    <select id="MailType" required>
+      <option value="">Select Mail type</option>
+      <option value="Event 1">DOCUMENT APPROVED</option>
+      <option value="Event 2">PAYMENT APPROVED</option>
+    </select>
+
+    <br></br>
+
+    <input placeholder="Ticket ID" id="TicketID" type="text" required>
+
+    <button type="button" id="btn" onclick="sendMail()">Send !</button>
+  </form>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init({
+        publicKey: "jeHoLzk4n0NCHjQjC"
+      });
+    })();
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
